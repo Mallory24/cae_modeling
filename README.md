@@ -1,6 +1,6 @@
 # Causal Action--Effect Modeling 
 The official project repository for the IJCNLP-AACL 2023 paper: Implicit Affordance Acquisition via Causal Action–Effect Modeling in the Video Domain.\
-**NOTE**: the code has not be tested.
+**NOTE**: the code has not been tested.
 
 We built upon the HERO architecture and proposed two pre-training tasks for implicit affordance learning from the video domain. \
 Most codes are copied/modified from [HERO's repository](https://github.com/linjieli222/HERO). \
