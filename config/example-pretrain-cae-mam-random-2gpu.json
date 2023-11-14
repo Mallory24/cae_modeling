@@ -1,0 +1,83 @@
+{
+    "txt_db": "single_result_verb_exp/42/txt_db",
+    "img_db": "single_result_verb_exp/42/video_db",
+    "targets": [
+        {"name": "cae",
+         "sub_txt_db": "full",
+         "vfeat_db": "full",
+         "vfeat_interval": 2.0,
+         "splits": [
+             {"name": "all",
+              "tasks": ["mam"],
+              "train_idx": "train_ids.json",
+              "val_idx": "val_ids.json",
+              "ratio": [1]
+             }
+         ],
+            "frame_negative": {
+                "train_neg": "",
+                "val_neg": ""
+            }
+        }
+    ],
+    "targets_ratio": [1],
+    "mask_prob": 0.15,
+    "mask_strategy": "verb_random_joint",
+    "frame_mask_strategy": "",
+    "train_frame_negative_type": "",
+    "val_frame_negative_type": "",
+    "frame_type_vocab_size": 4,
+    "mem_nce_temp": 1.0,
+    "compressed_db": true,
+    "model_config": "config/hero_pretrain.json",
+    "checkpoint": "",
+    "load_partial_pretrained" : true,
+    "skip_layer_loading" : true,
+    "output_dir": "./results/",
+    "max_clip_len": 100,
+    "max_txt_len": 60,
+    "single_sub": true,
+    "subtitle_only": false,
+    "without_aft": false,
+    "vfeat_version": "resnet_slowfast",
+    "drop_svmr_prob": 0.8,
+    "train_batch_size": 16,
+    "val_batch_size": 64,
+    "gradient_accumulation_steps": 2,
+    "learning_rate": 7e-05,
+    "valid_steps": 500,
+    "save_steps": 500,
+    "num_train_steps": 100000,
+    "checkpoint_saving_strategy": "acc",
+    "optim": "adamw",
+    "betas": [
+        0.9,
+        0.98
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.01,
+    "grad_norm": 1.0,
+    "warmup_steps": 10000,
+    "lw_neg_q": 8.0,
+    "lw_neg_ctx": 8.0,
+    "lw_st_ed": 0.01,
+    "ranking_loss_type": "hinge",
+    "margin": 0.1,
+    "hard_pool_size": [
+        20
+    ],
+    "hard_neg_weights": [
+        10
+    ],
+    "hard_negtiave_start_step": [
+        0
+    ],
+    "train_span_start_step": -1,
+    "sub_ctx_len": 0,
+    "use_all_neg": true,
+    "seed": 77,
+    "fp16": true,
+    "n_workers": 4,
+    "pin_mem": true,
+    "rank": 0
+}
