@@ -1,15 +1,16 @@
+# Causal Action--Effect Modeling 
 The official project repository for the IJCNLP-AACL 2023 paper: Implicit Affordance Acquisition via Causal Action–Effect Modeling in the Video Domain.\
-NOTE: the code has not be tested.
+**NOTE**: the code has not be tested.
 
-We built upon the HERO architecture and proposed two pre-training tasks for implicit affordance learning from the video domain: \
-Most codes are copied/modified from [HERO's repository](https://github.com/linjieli222/HERO) \
-The visual frame feature extraction (SlowFast + ResNet-152) closely follows their recipe, which is available at [CAE_Video_Feature_Extractor](https://github.com/Mallory24/cae_video_feature_extractor)
+We built upon the HERO architecture and proposed two pre-training tasks for implicit affordance learning from the video domain. \
+Most codes are copied/modified from [HERO's repository](https://github.com/linjieli222/HERO). \
+The visual frame feature extraction (SlowFast + ResNet-152) closely follows their recipe, which is available at [CAE_Video_Feature_Extractor](https://github.com/Mallory24/cae_video_feature_extractor).
 
 <p align="left">
     <img src="figures/teaser.png"/>
 </p>
 
-If you find this dataset helpful, please cite:
+If you find this repository helpful, please cite:
 ```BibTeX
 @article{yang2023affordance,
   title={Implicit Affordance Acquisition via Causal Action–Effect Modeling in the Video Domain},
@@ -132,7 +133,7 @@ CUDA_VISIBLE_DEVICES=0 nohup horovodrun -np 1 python eval_map.py \
 --output_dir $PRETRAIN_EXP
 ```
 
-### 4. Run zero-shot extrinsic evaluation on PROST:
+### 4. Run the extrinsic evaluation on PROST in a zero-shot manner:
 *Note: replace `--output_dir` and `--checkpoint` with your own model trained in step 2.
 
 ```bash
